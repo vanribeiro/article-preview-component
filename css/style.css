@@ -6,6 +6,7 @@
     --background-card: hsl(210, 46%, 95%);
     --background-share-section: hsl(212, 23%, 69%);
     --background-footer: hsl(217, 19%, 35%);
+    --background-icon: hsl(212, 23%, 69%);
     
     --font-color-share-section: hsl(214, 17%, 51%);
     --link-color: hsl(212, 23%, 69%);
@@ -47,13 +48,7 @@ section{
 .main-text{
     width: 90%;
     margin: auto;
-    padding: 15px;
     color: var(--font-p-color);
-}
-
-.text-snippet{
-    margin-top: 15px;
-    margin-bottom: 15px;
 }
 
 .container{
@@ -88,6 +83,10 @@ header h1{
     margin-left: 15px;
 }
 
+.avatar-text p:last-child{
+    font-size: 0.875em;
+}
+
 .share-section{
     width: 10%;
 }
@@ -120,10 +119,25 @@ header h1{
     width: 30%;
 }
 
+.share-icon{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--background-icon);
+}
+
 .social-media-icons{
     width: 50%;
     display: flex;
     justify-content: space-around;
+}
+
+.img-container img{
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
 }
 
 .avatar-container img{
@@ -134,9 +148,58 @@ header h1{
 
 @media only screen and (max-width: 600px){
 
+    .main-text{
+        padding: 15px;
+    }
+
     figure img{
         border-top-left-radius: 5px;
         border-top-right-radius: 5px;
+    }
+
+    .text-snippet{
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+
+}
+
+@media only screen and (min-width: 768px){
+
+    
+    main.container{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+    }
+    
+    main section{
+        width: 758px;
+        height: 250px;
+        display: flex;
+        align-items: center;
+    }
+    
+    .main-text{
+        padding: 15px 89px 15px 0px;
+    }
+
+    .text-snippet{
+        font-size: 0.875em;
+        margin-top: 8px;
+        margin-bottom: 16px;
+        line-height: 20px;
+    }
+
+    .share-buttons{
+        display: none;
+    }
+    
+    .img-container img {
+        margin: -15px;
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
     }
 
 }
