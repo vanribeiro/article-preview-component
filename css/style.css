@@ -16,10 +16,12 @@
 
     --font-size-body: 13px;
     --h1-font-size: 1rem;
-    --h1-author-name: 0.8rem;
+    --h1-author-name: 0.8em;
     --font-family: 'Manrope', sans-serif;
     --p-font-weights: 400;
     --font-author-weights: 500;
+
+    --box-shadow-color: hsl(217, 19%, 35%);
 }
 
 *{
@@ -45,7 +47,7 @@ section{
     background-color: var(--background-card);
 }
 
-.main-text{
+.snippet-container{
     width: 90%;
     margin: auto;
     color: var(--font-p-color);
@@ -59,10 +61,6 @@ section{
 header h1{
     font-size: var(--h1-font-size);
     color: var(--font-color-header-text);
-}
-
-.img-fluid{
-    max-width: 100%;
 }
 
 .avatar-container, .author{
@@ -84,7 +82,7 @@ header h1{
 }
 
 .avatar-text p:last-child{
-    font-size: 0.875em;
+    font-size: 0.7em;
 }
 
 .share-section{
@@ -142,13 +140,24 @@ header h1{
 
 .avatar-container img{
     border-radius: 50%;
-    width: 50px;
-    height: 50px;
+    width: 30px;
+    height: 30px;
 }
 
 @media only screen and (max-width: 600px){
+    
+    main.container{
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 
-    .main-text{
+    .img-fluid{
+        max-width: 100%;
+    }
+
+    .snippet-container{
         padding: 15px;
     }
 
@@ -164,44 +173,57 @@ header h1{
 
 }
 
+.share-buttons{
+    display: none;
+}
+
 @media only screen and (min-width: 768px){
 
-    
     main.container{
         display: flex;
-        align-items: center;
         justify-content: center;
-        height: 100vh;
-    }
-    
-    main section{
-        width: 758px;
-        height: 250px;
-        display: flex;
         align-items: center;
+        flex-direction: column;
+        height: 96vh;
     }
-    
+
+    section{
+        width: 568px;
+        height: 216px;
+        display: flex;
+        box-shadow: 5px 10px 20px var(--box-shadow-color);
+    }
+
+    .img-container{
+        overflow: hidden;
+        width: 39.333%; /* 1 / 3*/
+        height: inherit;
+    }
+
+    .img-container img{
+        display: block;
+        width: auto;
+        height: inherit;
+    }
+
+    .snippet-container{
+        width: 60.667%; /* 2/3 */
+        height: inherit;
+        display: flex;
+    }
+
     .main-text{
-        padding: 15px 89px 15px 0px;
+        width: 80%;
+        margin: auto;
+        height: 80%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
     }
 
-    .text-snippet{
-        font-size: 0.875em;
-        margin-top: 8px;
-        margin-bottom: 16px;
-        line-height: 20px;
+    .main-text p{
+        font-size: 0.8em;
     }
-
-    .share-buttons{
-        display: none;
-    }
-    
-    .img-container img {
-        margin: -15px;
-        border-top-left-radius: 5px;
-        border-bottom-left-radius: 5px;
-    }
-
 }
 
 .attribution {
