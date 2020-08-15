@@ -133,6 +133,11 @@ header h1{
     justify-content: space-around;
 }
 
+.social-media-icons a {
+    display: flex;
+    align-items: center;
+}
+
 .img-container img{
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
@@ -174,7 +179,7 @@ header h1{
 }
 
 .share-buttons{
-    display: none;
+    display: block;
 }
 
 @media only screen and (min-width: 768px){
@@ -223,6 +228,58 @@ header h1{
 
     .main-text p{
         font-size: 0.8em;
+    }
+
+    .share-icon{
+        cursor: pointer;
+    }
+
+    .share-icon:hover{
+        background-color: var(--background-footer);
+        transition: 0.5s ease-in all;
+    }
+    
+    .share-icon svg:hover path{
+        fill: white;
+    }
+
+    
+    .share-buttons--none{
+        display: none;
+        animation: fadeIn 1s;
+    }
+
+    @keyframes fadeIn {
+        from{ opacity: 0; }
+        to{ opacity: 1; }
+    }
+
+    .share-buttons--toggle{
+        display: flex;
+        position: absolute;
+        transform: translateX(236px);
+    }
+    
+
+    .share-buttons{
+        width: 256px;
+        padding: 16px;
+        border: 1px solid var(--background-footer);
+        margin-bottom: 20px;
+        transition: 0.5s ease-in all;
+    }
+
+    .share-buttons::before, .share-buttons::after{
+        content: '';
+        position: absolute;
+        top: 100%;
+        right: 112px;
+        border: 16px solid transparent;
+        border-top-color: var(--background-footer);
+    }
+
+    .share-buttons::after{
+        border: 16px solid transparent;
     }
 }
 
