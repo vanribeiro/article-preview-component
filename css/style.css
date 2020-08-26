@@ -4,6 +4,7 @@
     --background-share-dialog: hsl(217, 19%, 35%);
     --background-page: hsl(212, 23%, 69%);
     --background-card: hsl(210, 46%, 95%);
+    --button-icon-path: hsl(210, 46%, 95%);
     --background-share-section: hsl(212, 23%, 69%);
     --background-footer: hsl(217, 19%, 35%);
     --background-icon: hsl(212, 23%, 69%);
@@ -95,7 +96,7 @@ header h1{
 }
 
 .share-buttons{
-    padding: 5px;
+    padding: 5px 20px;
     background-color: var(--background-footer);
 }
 
@@ -149,6 +150,17 @@ header h1{
     height: 30px;
 }
 
+.share-buttons--none{
+    display: none;
+    animation: fadeIn 1s;
+}
+
+@keyframes fadeIn {
+    from{ opacity: 0; }
+    to{ opacity: 1; }
+}
+
+
 @media only screen and (max-width: 600px){
     
     main.container{
@@ -156,6 +168,7 @@ header h1{
         display: flex;
         justify-content: center;
         align-items: center;
+        flex-direction: column;
     }
 
     .img-fluid{
@@ -163,7 +176,7 @@ header h1{
     }
 
     .snippet-container{
-        padding: 15px;
+        padding: 32px 20px;
     }
 
     figure img{
@@ -176,11 +189,24 @@ header h1{
         margin-bottom: 15px;
     }
 
+    .share-buttons{
+        width: 90%;
+        height: 64px;
+        margin-top: 11px;
+    }
+
+    .share-buttons--toggle{
+        display: flex;
+        position: absolute;
+        transform: translateY(234px);
+    }
+
+    .share-buttons--toggle .share-icon svg path{
+        fill: var(--button-icon-path);
+    }
+
 }
 
-.share-buttons{
-    display: block;
-}
 
 @media only screen and (min-width: 768px){
 
@@ -243,23 +269,15 @@ header h1{
         fill: white;
     }
 
-    
-    .share-buttons--none{
-        display: none;
-        animation: fadeIn 1s;
-    }
-
-    @keyframes fadeIn {
-        from{ opacity: 0; }
-        to{ opacity: 1; }
-    }
-
     .share-buttons--toggle{
         display: flex;
         position: absolute;
         transform: translateX(236px);
     }
     
+    .share-buttons--toggle .share-icon{
+        display: none;
+    }
 
     .share-buttons{
         width: 256px;
