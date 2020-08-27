@@ -7,15 +7,15 @@
   <link rel="stylesheet" href="css/style.css">
   <title>Frontend Mentor | Article preview component</title>
 </head>
-<body>
+<body tabindex="0">
 
   <main class="container">
-    <section tabindex="0">
+    <section tabindex="1">
       <div class="img-container">
         <img class="img-fluid" src="/images/drawers.jpg" alt="Drawers">
       </div>
       <div class="snippet-container">
-        <div class="main-text" tabindex="1">
+        <div class="main-text" tabindex="2">
           <header>
             <h1>
               Shift the overall look and feel by adding these wonderful 
@@ -30,7 +30,7 @@
             </p>
           </div>
           <div class="text-snippet-footer">
-            <div class="author" tabindex="2">
+            <div class="author" tabindex="3">
               <div class="avatar-container">
                 <img src="/images/avatar-michelle.jpg" alt="Avatar Michelle">
                 <div class="avatar-text">
@@ -38,10 +38,10 @@
                   <p>28 Jun 2020</p>
                 </div>
               </div>
-              <div class="share-section" tabindex="3">
+              <div class="share-section" tabindex="4">
                 <div class="share-icon">
                   <a aria-label="Share Button" role="button">
-                    <svg alt="share button icon" xmlns="http://www.w3.org/2000/svg" width="15" height="13"><path fill="#6E8098" d="M15 6.495L8.766.014V3.88H7.441C3.33 3.88 0 7.039 0 10.936v2.049l.589-.612C2.59 10.294 5.422 9.11 8.39 9.11h.375v3.867L15 6.495z"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="15" height="13"><path fill="#6E8098" d="M15 6.495L8.766.014V3.88H7.441C3.33 3.88 0 7.039 0 10.936v2.049l.589-.612C2.59 10.294 5.422 9.11 8.39 9.11h.375v3.867L15 6.495z"/></svg>
                   </a>
                 </div>
               </div>
@@ -60,9 +60,9 @@
               <a href="#"><img src="images/icon-twitter.svg" alt="Twitter Icon"></a>
               <a href="#"><img src="images/icon-pinterest.svg" alt="Pinterest Icon"></a>
             </div>
-            <div class="share-icon">
-              <a role="button">
-                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="13"><path fill="#6E8098" d="M15 6.495L8.766.014V3.88H7.441C3.33 3.88 0 7.039 0 10.936v2.049l.589-.612C2.59 10.294 5.422 9.11 8.39 9.11h.375v3.867L15 6.495z"/></svg>
+            <div class="share-icon" tabindex="0">
+              <a role="button" aria-label="Share Button">
+                <svg role="img" aria-label="Share Button Icon" xmlns="http://www.w3.org/2000/svg" width="15" height="13"><path fill="#6E8098" d="M15 6.495L8.766.014V3.88H7.441C3.33 3.88 0 7.039 0 10.936v2.049l.589-.612C2.59 10.294 5.422 9.11 8.39 9.11h.375v3.867L15 6.495z"/></svg>
               </a>
             </div>
           </div>
