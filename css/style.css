@@ -90,6 +90,13 @@ header h1{
     width: 10%;
 }
 
+main.container section:focus, 
+.main-text:focus,
+.author:focus, 
+.share-section:focus{
+    outline: 1px dotted #000;
+}
+
 .avatar-container h2{
     font-size: var(--h1-author-name);
     color: var(--font-color-header-text);
